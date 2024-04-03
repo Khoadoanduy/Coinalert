@@ -1,8 +1,18 @@
 .container{
     color: white;
     display: flex;
+    width: 100%;
+}
+.coins{
+    display: flex;
+    width: 100%;
 }
 .coin-container p{
-    margin-right: 200px;
     display: flex;
+    margin-right: 200px;
+}
+.coin-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

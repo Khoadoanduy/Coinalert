@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect } from "react";
-// import fetchData from "../../main";
 
 import './body.css'
 import { useState } from 'react';
@@ -19,12 +18,12 @@ function Body() {
     
     return (
       <div className = 'container'>
-        <div className = 'coin-container'>
+        <div className = 'coins'>
           {coins.map((coin) => (
-            <div key={coin.id} >
+            <div key={coin.id} className = 'coin-container'>
               <h2 className = 'coin-title'>{coin.name} </h2>
               <p  className = 'coin-title'>{coin.symbol}</p>
-              <p>Price(USD):{parseInt(coin.priceUsd)}</p>
+              <p>Price(USD): {parseInt(coin.priceUsd)}</p>
             </div>
           ))}
         </div>
