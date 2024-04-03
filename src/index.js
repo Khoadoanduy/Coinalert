@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import Main from './main';
-// import HomePage from './home';
-import Home from './home'
 
+import App from './App';
+import Body from './components/Body/body';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
+    <App/>
+    <Body/>
   </React.StrictMode>
 );
 
