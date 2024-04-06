@@ -46,3 +46,25 @@
 .coin-title h3{
     font-size: 0.9em;
 }
+
+.change-percentage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 135%;
+    
+}
+.change-percentage{
+    color: white;
+    font-size: 1em;
+    
+}
+.isDown{
+   
+    filter:hue-rotate(300deg) saturate(210%) brightness(0.7) contrast(170%);
+}
+
+.isUp {
+    filter: hue-rotate(85deg) saturate(80%) brightness(0.85);
+}
