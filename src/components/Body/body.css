@@ -60,6 +60,12 @@
     font-size: 1em;
     
 }
+.down{
+    color: #e7334c;
+}
+.up{
+    color: #2bb57b;
+}
 .isDown{
    
     filter:hue-rotate(300deg) saturate(210%) brightness(0.7) contrast(170%);

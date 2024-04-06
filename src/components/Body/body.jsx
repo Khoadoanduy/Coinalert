@@ -27,8 +27,8 @@ function Body() {
               <h3>{coin.symbol}</h3>
             </div>
             <div className='change-percentage'>
-              <p> 24 Hours: <span>{coin.price24h}</span> </p>
-              <p> 7 Days: <span>{coin.price7d}</span> </p>
+              <p> 24 Hours: <span className={coin.price7d < 0 ? 'down' : 'up'}>{coin.price24h}</span> </p>
+              <p> 7 Days: <span className={coin.price7d < 0 ? 'down' : 'up'}>{coin.price7d}</span> </p>
               
 
             </div>
