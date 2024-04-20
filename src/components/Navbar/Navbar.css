@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  width: 100%;
+  width: 90%;
   height: 80px;
   display: flex;
   align-items: center;
@@ -25,6 +25,7 @@
 .nav-menu {
   display: flex;
   list-style-type: none;
+  
 }
 
 .nav-menu li {
@@ -68,6 +69,32 @@
   height: 1.5px; /* Adjust as needed */
   background-color: #ccc; /* Adjust as needed */
 }
+
+.login-wrapper{
+  margin-left: auto; /* Pushes the login link to the right */
+  display: flex; /* Ensure flex behavior */
+  align-items: left;
+  /* margin-right: 20px; */
+  
+}
+.login-wrapper a {
+  text-decoration: none; /* Removes underline from the login link */
+  border: 1px solid white; /* Adds a border around the login link */
+  padding: 1px 20px; /* Adds padding to the login link */
+  border-radius: 50px; /* Adds rounded corners to the border */
+}
+
+
+
+.login-wrapper  a:hover{
+  text-decoration: none; /* Removes underline from the login link */
+  color: black;
+  background: white;
+  border: 1px solid black; /* Adds a border around the login link */
+  padding: 1px 20px; /* Adds padding to the login link */
+  border-radius: 50px; /* Adds rounded corners to the border */
+}
+
 @media screen and (max-width: 940px) {
 
   .mobile-menu {

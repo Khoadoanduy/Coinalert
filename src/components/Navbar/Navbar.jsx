@@ -20,7 +20,11 @@ function Navigation() {
                 <ul className="nav-menu">
                     <Link to='home' smooth={true} duration={500} ><li>Home</li></Link>
                     <Link to='about' smooth={true} duration={500} ><li>About</li></Link>
+                    
                 </ul>
+                <div className="login-wrapper">
+                        <Link to="login" smooth={true} duration={500}><h3 className="login">Login</h3></Link>
+                </div>
                 <div className="hamburger" onClick={handleNav}>
                     {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
 
