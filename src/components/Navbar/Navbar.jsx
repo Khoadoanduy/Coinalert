@@ -2,28 +2,28 @@ import React, { useState } from 'react'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { AiOutlineClose } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
-
 import { Link } from 'react-scroll'
-
 import './Navbar.css'
 
 function Navigation() {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)
+    
 
     return (
         <div>
-            <div name='home' className={nav ? 'navbar navbar-bg' : 'navbar'}>
+            <div idName = 'navbar' name='home' className={nav ? 'navbar navbar-bg' : 'navbar'}>
                 <div className={nav ? 'logo dark' : 'logo'}>
                     <h2>Coinalert</h2>
                 </div>
                 <ul className="nav-menu">
-                    <Link to='home' smooth={true} duration={500} ><li>Home</li></Link>
-                    <Link to='about' smooth={true} duration={500} ><li>About</li></Link>
+                    <a><li>Home</li></a>
+                    <a><li>About</li></a>
                     
                 </ul>
                 <div className="login-wrapper">
-                        <Link to="login" smooth={true} duration={500}><h3 className="login">Login</h3></Link>
+                    {/* <RouterLink to="login"><h3 className="login">Login</h3></RouterLink> */}
+                    <a><h3 className="login">Login</h3></a>
                 </div>
                 <div className="hamburger" onClick={handleNav}>
                     {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
