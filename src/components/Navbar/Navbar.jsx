@@ -4,15 +4,25 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import './Navbar.css'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginModal from '../Login/LoginModal'
 
 function Navigation() {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)
-    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     return (
         <div>
-            <div idName = 'navbar' name='home' className={nav ? 'navbar navbar-bg' : 'navbar'}>
+            <div name='home' className={nav ? 'navbar navbar-bg' : 'navbar'}>
                 <div className={nav ? 'logo dark' : 'logo'}>
                     <h2>Coinalert</h2>
                 </div>
@@ -22,9 +32,9 @@ function Navigation() {
                     
                 </ul>
                 <div className="login-wrapper">
-                    {/* <RouterLink to="login"><h3 className="login">Login</h3></RouterLink> */}
-                    <a><h3 className="login">Login</h3></a>
+                    <button onClick={openModal} className="login">Login</button>
                 </div>
+                <LoginModal isOpen={isModalOpen} onClose={closeModal} />
                 <div className="hamburger" onClick={handleNav}>
                     {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
 
