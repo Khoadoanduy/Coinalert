@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './body.css'
+
 function Body() {
   const [coins, setCoins] = useState([]);
 
