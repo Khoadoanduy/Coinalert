@@ -29,6 +29,10 @@
   list-style-type: none;
   
 }
+.nav-menu a{
+  color: white;
+  text-decoration: none;
+}
 
 .nav-menu li {
   padding: 0 1rem;

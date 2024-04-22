@@ -26,8 +26,9 @@ function Navigation() {
                     <h2>Coinalert</h2>
                 </div>
                 <ul className="nav-menu">
-                    <a><li>Home</li></a>
-                    <a><li>About</li></a>
+                    <a><li><Link to='/' duration={500} >Home</Link></li></a>
+                    <a><li><Link to='/about' duration={500} >About</Link></li></a>
+                    
                     
                 </ul>
                 <div className="login-wrapper">
@@ -41,8 +42,9 @@ function Navigation() {
 
                 <div className={nav ? 'mobile-menu active' : 'mobile-menu'}>
                     <ul className="mobile-nav">
-                        <Link to='home' smooth={true} duration={500} ><li>Home</li></Link>
-                        <Link to='about' smooth={true} duration={500} ><li>About</li></Link>
+                        
+                        <a><li><Link to='/' duration={500} >Home</Link></li></a>
+                        <a><li><Link to='/about' duration={500} >About</Link></li></a>
                     </ul>
                     <div className="mobile-menu-bottom">
                         <div className="social-icons">
